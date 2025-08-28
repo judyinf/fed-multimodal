@@ -148,4 +148,3 @@ FedMultimodal also uses the code from our previous work:
 }
 ```
 Dev branch setup
-Dev branch set on remote server
