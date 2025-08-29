@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fed-multimodal"
+description = "FedMultimodal: A benchmark for multimodal Federated Learning"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "Tiantian Feng" }
+]
+urls = { Homepage = "https://github.com/usc-sail/fed-multimodal" }
+
+# We load version and dependencies dynamically (see [tool.setuptools.dynamic]).
+dynamic = ["version", "dependencies"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "scipy",
+  "black",
+  "flake8",
+  "isort"
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[tool.setuptools.dynamic]
+# Mirrors your read_version() that read __version__ from fed_multimodal/version.py
+version = { attr = "fed_multimodal.version.__version__" }
+
+# Keep a single source of truth for runtime deps
+dependencies = { file = ["requirements.txt"] }
