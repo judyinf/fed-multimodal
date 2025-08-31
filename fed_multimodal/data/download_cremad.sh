@@ -9,4 +9,4 @@ fi
 cd $data_dir && mkdir crema_d
 cd crema_d
 
-git-lfs clone https://github.com/CheyneyComputerScience/CREMA-D.git
+git clone https://github.com/CheyneyComputerScience/CREMA-D.git

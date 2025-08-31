@@ -15,7 +15,7 @@ os.environ["IMAGEIO_FFMPEG_EXE"] = "/usr/bin/ffmpeg"
 from PIL import Image
 from tqdm import tqdm
 from pathlib import Path
-from moviepy.editor import *
+from moviepy.video.io.VideoFileClip import VideoFileClip
 from torchvision import models, transforms
 from transformers import BertTokenizer, BertModel
 from transformers import AlbertTokenizer, AlbertModel
@@ -147,7 +147,7 @@ class FeatureManager():
         
         # read fps and total frames
         fps = int(clip.fps)
-        nframes = clip.reader.nframes
+        nframes = clip.reader.n_frames
         # pdb.set_trace()
         
         # read fps and total frames read frames data

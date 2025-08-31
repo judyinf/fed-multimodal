@@ -313,8 +313,8 @@ if __name__ == '__main__':
                 audio_dict, 
                 video_dict,
                 client_sim_dict=client_sim_dict,
-                default_feat_shape_a=np.array([600, constants.feature_len_dict["mfcc"]]),
-                default_feat_shape_b=np.array([6, constants.feature_len_dict["mobilenet_v2"]]),
+                default_feat_shape_a=np.array([600, constants.feature_len_dict["mfcc"]]), # [600,80]
+                default_feat_shape_b=np.array([6, constants.feature_len_dict["mobilenet_v2"]]), # [6,1280]
                 shuffle=shuffle
             )
         

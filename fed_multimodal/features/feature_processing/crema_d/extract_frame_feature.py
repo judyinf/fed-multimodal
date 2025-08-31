@@ -9,7 +9,7 @@ import argparse
 
 from tqdm import tqdm
 from pathlib import Path
-from moviepy.editor import *
+# from moviepy.editor import *
 
 from fed_multimodal.features.feature_processing.feature_manager import FeatureManager
 

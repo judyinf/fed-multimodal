@@ -151,6 +151,7 @@ class MMActionClassifier(nn.Module):
                 enforce_sorted=False
             )
         if len_v[0] != 0:
+            len_v = len_v.clamp(min=1) # Clamp lengths to at least 1
             x_video = pack_padded_sequence(
                 x_video, 
                 len_v.cpu().numpy(), 
